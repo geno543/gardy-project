@@ -1,0 +1,25 @@
+{
+  "short_name": "Gardy",
+  "name": "Gardy - Water Treatment Innovation",
+  "icons": [
+    {
+      "src": "loggoo.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "loggoo.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "loggoo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#DAA520",
+  "background_color": "#FFF8DC"
+}

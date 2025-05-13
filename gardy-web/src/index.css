@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans:wght@300;400;600&family=Poppins:wght@400;500;700&family=Roboto:ital,wght@0,400;0,500;1,300&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --deep-blue: #2B3A69;
+  --sky-blue: #00BFFF;
+  --light-gray: #F5F7FA;
+  --white: #FFFFFF;
+  --dark-gray: #333333;
+  --success-green: #28A745;
+  --warning-orange: #FFC107;
+  --error-red: #DC3545;
+  --poster-bg: #DBA76B;
+  --section-bg: #FFFFFF;
+  --header-bg: #BC6241;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: var(--poster-bg);
+  color: var(--dark-gray);
+  font-family: 'Roboto', 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', 'Poppins', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: var(--deep-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--sky-blue);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.citation, .text-note {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+.section-label {
+  font-family: 'Montserrat', 'Poppins', Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+  background-color: var(--header-bg);
+  padding: 8px 20px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.border-pattern {
+  height: 20px;
+  width: 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--deep-blue),
+    var(--deep-blue) 15px,
+    var(--poster-bg) 15px,
+    var(--poster-bg) 30px
+  );
+}

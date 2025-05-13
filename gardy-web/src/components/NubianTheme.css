@@ -1,0 +1,197 @@
+/* Nubian Theme Styles for Water Treatment Project */
+
+:root {
+  /* Nubian-inspired color palette */
+  --nubian-gold: #DAA520;
+  --nubian-orange: #CD7F32;
+  --nubian-terracotta: #E2725B;
+  --nubian-brown: #8B4513;
+  --nubian-sand: #F5DEB3;
+  --nubian-navy: #2A3D5A;
+  --nubian-blue: #5B7A9D;
+  --nubian-teal: #008080;
+  --nubian-black: #222222;
+  --nubian-cream: #FFF8DC;
+
+  /* Typography */
+  --font-heading: 'Cinzel', serif;
+  --font-body: 'Raleway', sans-serif;
+}
+
+/* Nubian Pattern Border */
+.nubian-border {
+  border-image-source: linear-gradient(
+    45deg,
+    var(--nubian-navy) 25%,
+    var(--nubian-gold) 25%,
+    var(--nubian-gold) 50%,
+    var(--nubian-terracotta) 50%,
+    var(--nubian-terracotta) 75%,
+    var(--nubian-navy) 75%
+  );
+  border-image-slice: 1;
+  border-image-width: 20px;
+  border-image-outset: 0;
+  border-image-repeat: repeat;
+}
+
+/* Nubian Pattern Top/Bottom Border */
+.nubian-pattern-border {
+  position: relative;
+  padding: 20px 0;
+}
+
+.nubian-pattern-border::before,
+.nubian-pattern-border::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='16' viewBox='0 0 60 16'%3E%3Cpath d='M0,8 L10,0 L20,8 L30,0 L40,8 L50,0 L60,8 L50,16 L40,8 L30,16 L20,8 L10,16 Z' fill='%23DAA520'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-size: 60px 16px;
+}
+
+.nubian-pattern-border::before {
+  top: 0;
+}
+
+.nubian-pattern-border::after {
+  bottom: 0;
+}
+
+/* Stylized headers with Nubian flair */
+.nubian-heading {
+  font-family: var(--font-heading);
+  color: var(--nubian-navy);
+  position: relative;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.nubian-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--nubian-gold), var(--nubian-terracotta));
+  border-radius: 2px;
+}
+
+/* Nubian card styling */
+.nubian-card {
+  background-color: var(--nubian-cream);
+  border: 1px solid var(--nubian-sand);
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  position: relative;
+}
+
+.nubian-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--nubian-gold), var(--nubian-terracotta), var(--nubian-navy));
+  border-radius: 4px 4px 0 0;
+}
+
+/* Styled buttons */
+.nubian-button {
+  background-color: var(--nubian-navy);
+  color: var(--nubian-cream);
+  border: 2px solid var(--nubian-gold);
+  padding: 8px 16px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nubian-button:hover {
+  background-color: var(--nubian-gold);
+  color: var(--nubian-navy);
+}
+
+.nubian-button.active {
+  background-color: var(--nubian-gold);
+  color: var(--nubian-navy);
+  box-shadow: 0 0 10px rgba(218, 165, 32, 0.5);
+}
+
+/* Metric styling */
+.nubian-metric {
+  text-align: center;
+  padding: 15px;
+  background-color: var(--nubian-cream);
+  border: 1px solid var(--nubian-gold);
+  border-radius: 4px;
+}
+
+.nubian-metric-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--nubian-gold);
+  font-family: var(--font-heading);
+}
+
+.nubian-metric-label {
+  font-family: var(--font-body);
+  color: var(--nubian-navy);
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+/* Step process styling */
+.nubian-step {
+  position: relative;
+  padding-left: 60px;
+  margin-bottom: 30px;
+}
+
+.nubian-step-number {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background-color: var(--nubian-gold);
+  color: var(--nubian-navy);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+.nubian-step::after {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  width: 2px;
+  height: calc(100% - 30px);
+  background-color: var(--nubian-gold);
+}
+
+.nubian-step:last-child::after {
+  display: none;
+}
+
+/* Container with papyrus-like background */
+.papyrus-bg {
+  background-color: var(--nubian-cream);
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23daa520' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+  padding: 20px;
+} 

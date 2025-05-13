@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40">
+  <defs>
+    <linearGradient id="ankh-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#003366" />
+      <stop offset="50%" stop-color="#DAA520" />
+      <stop offset="100%" stop-color="#003366" />
+    </linearGradient>
+  </defs>
+  <path d="M20 2C17.5 2 15.5 4 15.5 6.5C15.5 9 17.5 11 20 11C22.5 11 24.5 9 22.5 6.5C22.5 4 22.5 2 20 2z
+  M15 12C13 14 10 15 8 17C6 19 5 21.5 5 24C5 28 9 31 14 31L14 38L26 38L26 31C31 31 35 28 35 24C35 21.5 34 19 32 17C30 15 27 14 25 12
+  M15 14L25 14C26.5 15.5 29 16.5 31 18.5C32.5 20 33 22 33 24C33 26.5 30 29 25 29L15 29C10 29 7 26.5 7 24C7 22 7.5 20 9 18.5C11 16.5 13.5 15.5 15 14z
+  M16 29L16 36L24 36L24 29L16 29z" 
+  fill="url(#ankh-gradient)" stroke="#DAA520" stroke-width="0.5"/>
+</svg> 

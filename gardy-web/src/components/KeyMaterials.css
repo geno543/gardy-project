@@ -1,0 +1,360 @@
+/* KeyMaterials.css - Enhanced styling with Nubian influences */
+.key-materials {
+  padding: 5rem 0;
+  position: relative;
+  background-color: #FFF8DC;
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 0L50 40L40 80L30 40L40 0Z' stroke='%23D4AF3720' fill='none' stroke-width='0.5'/%3E%3C/svg%3E");
+}
+
+.materials-title {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  color: #8B4513;
+  text-align: center;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.materials-title::before,
+.materials-title::after {
+  content: '';
+  height: 2px;
+  width: 50px;
+  background: linear-gradient(to right, transparent, #D4AF37);
+  margin: 0 15px;
+}
+
+.materials-title::after {
+  background: linear-gradient(to left, transparent, #D4AF37);
+}
+
+.materials-subtitle {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2rem;
+  color: #A67C52;
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.materials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.material-card {
+  background-color: #FFF8E1;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  position: relative;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  min-height: 280px;
+}
+
+.material-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5L35 25L30 45L25 25L30 5Z' stroke='%23D4AF3710' fill='none' stroke-width='0.5'/%3E%3C/svg%3E");
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.material-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.material-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.material-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  font-size: 1.8rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.material-name {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;
+  color: #8B4513;
+  margin: 0;
+}
+
+.material-description {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  color: #5D4037;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.material-details {
+  height: 0;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.material-details.visible {
+  height: auto;
+  opacity: 1;
+  margin-top: 1rem;
+}
+
+.details-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #8B4513;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(139, 69, 19, 0.2);
+}
+
+.material-specs {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.material-specs li {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.9rem;
+  color: #5D4037;
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  position: relative;
+}
+
+.material-specs li::before {
+  content: '•';
+  color: #D4AF37;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+}
+
+.material-efficiency-meter {
+  margin-top: 1.5rem;
+}
+
+.efficiency-label {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.9rem;
+  color: #8B4513;
+  margin-bottom: 0.5rem;
+}
+
+.efficiency-bar {
+  height: 10px;
+  background-color: #F5EBD4;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.efficiency-fill {
+  height: 100%;
+  border-radius: 5px;
+  transition: width 1s ease-in-out;
+}
+
+.material-border {
+  position: absolute;
+  background: linear-gradient(to right, #D4AF37, transparent);
+  transition: all 0.4s ease;
+  opacity: 0.3;
+}
+
+.material-card:hover .material-border {
+  opacity: 1;
+}
+
+.material-border.top {
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+}
+
+.material-border.right {
+  top: 0;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(to bottom, #D4AF37, transparent);
+}
+
+.material-border.bottom {
+  bottom: 0;
+  right: 0;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(to left, #D4AF37, transparent);
+}
+
+.material-border.left {
+  bottom: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(to top, #D4AF37, transparent);
+}
+
+/* Materials diagram section */
+.materials-diagram {
+  background-color: rgba(255, 248, 220, 0.8);
+  border-radius: 8px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  position: relative;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.diagram-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.8rem;
+  color: #8B4513;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.diagram-description {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  color: #5D4037;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
+}
+
+.diagram-visualization {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 1rem 0;
+}
+
+.diagram-connector {
+  position: absolute;
+  height: 4px;
+  background: linear-gradient(to right, #8B4513, #D4AF37);
+  top: 50%;
+  left: 10%;
+  right: 10%;
+  transform: translateY(-50%);
+  z-index: 0;
+  border-radius: 2px;
+}
+
+.stage {
+  width: 80px;
+  height: 80px;
+  background-color: #FFF8E1;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border: 2px solid #D4AF37;
+  transition: all 0.3s ease;
+}
+
+.stage:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.stage-number {
+  font-family: 'Cinzel', serif;
+  font-size: 1.8rem;
+  color: #8B4513;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.stage-label {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.8rem;
+  color: #A67C52;
+  margin-top: 0.3rem;
+}
+
+@media (max-width: 992px) {
+  .materials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .diagram-visualization {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .diagram-connector {
+    display: none;
+  }
+  
+  .stage {
+    margin: 0 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .materials-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .materials-title {
+    font-size: 2rem;
+  }
+  
+  .materials-title::before,
+  .materials-title::after {
+    width: 30px;
+  }
+}
+
+/* Animation for card activation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.material-details.visible {
+  animation: fadeIn 0.5s ease-out forwards;
+} 

@@ -1,0 +1,234 @@
+/* PerformanceMetrics.css - Enhanced styling */
+.performance-metrics {
+  padding: 5rem 0;
+  position: relative;
+  background-color: #FCF9E9;
+}
+
+.metrics-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.metrics-title {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  color: #8B4513;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.metrics-description {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2rem;
+  color: #A67C52;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.metric-card {
+  background-color: #FFF8DC;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  position: relative;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.metric-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border-color: rgba(212, 175, 55, 0.8);
+}
+
+.metric-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5L35 25L30 45L25 25L30 5Z' stroke='%23D4AF3715' fill='none' stroke-width='0.5'/%3E%3C/svg%3E");
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.metric-icon {
+  margin: 0 auto 1rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #F5EBD4;
+  color: #8B4513;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border: 2px solid rgba(212, 175, 55, 0.3);
+  transition: all 0.3s ease;
+}
+
+.metric-card:hover .metric-icon {
+  background-color: #D4AF37;
+  color: #FFF8DC;
+  border-color: #8B4513;
+  transform: scale(1.1);
+}
+
+.metric-value {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #8B4513;
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.metric-label {
+  font-family: 'Cinzel', serif;
+  font-size: 1.3rem;
+  color: #8B4513;
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.metric-description {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.9rem;
+  color: #A67C52;
+  position: relative;
+  z-index: 1;
+}
+
+.metric-detail {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.9rem;
+  color: #5D4037;
+  position: relative;
+  z-index: 1;
+  text-align: left;
+  padding: 0 0.5rem;
+  margin-top: 1rem;
+}
+
+.metric-detail.visible {
+  height: auto;
+  opacity: 1;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.metric-note {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.9rem;
+  color: #A67C52;
+  font-style: italic;
+  margin-top: 2rem;
+}
+
+.card-decoration {
+  position: absolute;
+  background: linear-gradient(to right, #D4AF37, transparent);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.metric-card:hover .card-decoration {
+  opacity: 1;
+}
+
+.card-decoration.left {
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(to bottom, #D4AF37, transparent);
+}
+
+.card-decoration.right {
+  top: 0;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(to bottom, #D4AF37, transparent);
+}
+
+.metrics-decoration {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.decoration-diamond {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  transform: rotate(45deg);
+  opacity: 0.05;
+  border: 2px solid #D4AF37;
+}
+
+.diamond-1 {
+  top: -50px;
+  left: -50px;
+}
+
+.diamond-2 {
+  bottom: -50px;
+  right: -50px;
+}
+
+@media (max-width: 992px) {
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .metrics-title {
+    font-size: 2rem;
+  }
+  
+  .metrics-description {
+    font-size: 1rem;
+  }
+}
+
+/* Animation for value counting */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.metric-value {
+  animation: bounce 2s ease-in-out infinite;
+} 

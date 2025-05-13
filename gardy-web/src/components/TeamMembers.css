@@ -1,0 +1,311 @@
+/* TeamMembers.css - Nubian-inspired styling */
+.team-section {
+  padding: 5rem 0;
+  position: relative;
+  background: linear-gradient(to bottom, rgba(255, 248, 220, 0.1), rgba(255, 248, 220, 0.5));
+}
+
+.team-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.team-title {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  color: #8B4513;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.title-decoration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.decoration-line {
+  height: 2px;
+  width: 100px;
+  background: linear-gradient(to right, transparent, #D4AF37, transparent);
+}
+
+.decoration-symbol {
+  width: 20px;
+  height: 20px;
+  margin: 0 1rem;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 0L12.2451 7.75489L20 10L12.2451 12.2451L10 20L7.75489 12.2451L0 10L7.75489 7.75489L10 0Z' fill='%23D4AF37'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.team-description {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2rem;
+  color: #5D4037;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  perspective: 1000px;
+}
+
+.team-card {
+  height: 400px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease-in-out;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+}
+
+.team-card.active .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: #FFF8DC;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.card-front {
+  z-index: 2;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  background-color: #FCF5E5;
+  text-align: center;
+}
+
+.profile-image-container {
+  width: 180px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.profile-image-frame {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  padding: 8px;
+  background: linear-gradient(45deg, #D4AF37, #FFD700, #D4AF37);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #E6D3A3;
+  background-size: cover;
+  background-position: center;
+  border: 3px solid #FFF8DC;
+  /* Using a fallback image with a stylized silhouette */
+  background-image: url("data:image/svg+xml,%3Csvg width='160' height='160' viewBox='0 0 160 160' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='80' cy='80' r='80' fill='%23E6D3A3'/%3E%3Cpath d='M80 85C94.9117 85 107 72.9117 107 58C107 43.0883 94.9117 31 80 31C65.0883 31 53 43.0883 53 58C53 72.9117 65.0883 85 80 85Z' fill='%238B4513'/%3E%3Cpath d='M120 138.889C120 111.071 102.091 90 80 90C57.909 90 40 111.071 40 138.889V160H120V138.889Z' fill='%238B4513'/%3E%3C/svg%3E");
+}
+
+.member-info {
+  text-align: center;
+}
+
+.member-name {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;
+  color: #8B4513;
+  margin-bottom: 0.5rem;
+}
+
+.member-role {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  color: #A67C52;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+.member-bio {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.95rem;
+  color: #5D4037;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.member-contact {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  background-color: #EDDCB0;
+  border: 1px solid #D4AF37;
+}
+
+.social-link svg {
+  fill: #8B4513;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background-color: #D4AF37;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.social-link:hover svg {
+  fill: #FFF8DC;
+}
+
+.linkedin:hover {
+  background-color: #0077B5;
+  border-color: #0077B5;
+}
+
+.email:hover {
+  background-color: #8B4513;
+  border-color: #8B4513;
+}
+
+.card-decoration {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #D4AF37;
+  z-index: 10;
+}
+
+.top-left {
+  top: 10px;
+  left: 10px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.top-right {
+  top: 10px;
+  right: 10px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.bottom-left {
+  bottom: 10px;
+  left: 10px;
+  border-right: none;
+  border-top: none;
+}
+
+.bottom-right {
+  bottom: 10px;
+  right: 10px;
+  border-left: none;
+  border-top: none;
+}
+
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .team-card {
+    height: 380px;
+  }
+  
+  .profile-image-container {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .profile-image-frame {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+@media (max-width: 576px) {
+  .team-title {
+    font-size: 2rem;
+  }
+  
+  .team-description {
+    font-size: 1rem;
+  }
+  
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animation for card decorations */
+@keyframes pulse {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+.team-card:hover .card-decoration {
+  animation: pulse 2s infinite;
+}
+
+/* Add the subtle Nubian pattern background */
+.team-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5L40 25L30 45L20 25L30 5Z' stroke='%23D4AF3730' fill='none' stroke-width='0.5'/%3E%3C/svg%3E");
+  opacity: 0.1;
+  z-index: -1;
+} 
