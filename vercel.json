@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "buildCommand": "cd gardy-web && npm install && npm run build",
+  "outputDirectory": "gardy-web/build",
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ]
+} 

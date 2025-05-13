@@ -1,0 +1,10 @@
+{
+  "name": "gardy-web-parent",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "cd gardy-web && npm start",
+    "build": "cd gardy-web && npm install && npm run build",
+    "test": "cd gardy-web && npm test"
+  }
+} 
