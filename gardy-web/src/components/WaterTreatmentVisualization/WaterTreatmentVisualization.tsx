@@ -1,15 +1,13 @@
-import React, { useRef, useState, Suspense, useEffect } from 'react';
+import React, { useRef, useState, Suspense } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { 
   Html,
   Text, 
-  Float, 
   PerspectiveCamera,
   MeshTransmissionMaterial,
   Environment,
   Sphere,
   Box,
-  useTexture,
   OrbitControls
 } from '@react-three/drei';
 import * as THREE from 'three';

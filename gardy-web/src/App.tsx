@@ -3,7 +3,6 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Preload } from '@react-three/drei';
 import Scene from './components/Scene';
 import NavBar from './components/NavBar';
-import WaterInfoSection from './components/WaterInfoSection';
 import Abstract from './components/Abstract';
 import TreatmentProcess from './components/TreatmentProcess';
 import PerformanceMetrics from './components/PerformanceMetrics';
@@ -29,6 +28,8 @@ const Loader = () => {
   );
 };
 
+// Unused components - commented out to fix ESLint warnings
+/*
 // Floating particles component
 const FloatingParticles = () => {
   return (
@@ -74,6 +75,7 @@ const NubianDots = () => {
     </div>
   );
 };
+*/
 
 // Egyptian corner ornament component
 const EgyptianCornerOrnament = ({ position }: { position: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' }) => {
@@ -150,6 +152,7 @@ const NubianPattern = ({ position }: { position: 'top' | 'bottom' }) => {
 };
 
 function App() {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [section, setSection] = useState('home');
   const [isLoading, setIsLoading] = useState(true);
 
@@ -544,10 +547,10 @@ function App() {
         <div className="footer-content">
           <p>&copy; 2025 Gardy Water Treatment Technology</p>
           <div className="footer-social">
-            <a href="#" className="social-icon"><i className="fab fa-twitter"></i></a>
-            <a href="#" className="social-icon"><i className="fab fa-facebook"></i></a>
-            <a href="#" className="social-icon"><i className="fab fa-instagram"></i></a>
-            <a href="#" className="social-icon"><i className="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com" className="social-icon"><i className="fab fa-twitter"></i></a>
+            <a href="https://facebook.com" className="social-icon"><i className="fab fa-facebook"></i></a>
+            <a href="https://instagram.com" className="social-icon"><i className="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com" className="social-icon"><i className="fab fa-linkedin"></i></a>
           </div>
         </div>
       </footer>

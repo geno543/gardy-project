@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import logo from '../../../public/loggoo.png';
+// import logo from '../../../public/loggoo.png';
 
 interface NavBarProps {
   onNavChange: (section: string) => void;
@@ -33,10 +33,10 @@ const NavBar: React.FC<NavBarProps> = ({ onNavChange }) => {
 
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-      <a href="#" className="navbar-logo" onClick={() => handleNavClick('home')}>
+      <div className="navbar-logo" onClick={() => handleNavClick('home')}>
         <img src="/loggoo.png" alt="Gardy Logo" className="logo-image" />
         <span className="logo-text"></span>
-      </a>
+      </div>
       
       <div className={`navbar-links ${mobileMenuOpen ? 'active' : ''}`}>
         <a 
